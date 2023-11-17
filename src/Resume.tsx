@@ -9,6 +9,7 @@ import { IJobExperience, IJobItem, MyHistory } from "./JobHistory";
 import GitHubLogo from "./assets/Github.png";
 import LinkedInLogo from "./assets/LinkedIn.png";
 import GmailLogo from "./assets/Gmail.png";
+import HyperLinkIcon from "./assets/hyperlinkIcon.png";
 
 Font.registerHyphenationCallback((words) => [words]);
 
@@ -37,8 +38,8 @@ export default () => (
 
 export const Heading = () => (
   <View style={styles.heading}>
-    <Text style={{ position: "absolute", top: 20, left: 50, width: 200 }}>Jayden</Text>
-    <Text style={{ position: "absolute", top: 60, left: 160, width: 200 }}>Whiley</Text>
+    <Text style={{ position: "absolute", top: 20, left: 40, width: 200 }}>Jayden</Text>
+    <Text style={{ position: "absolute", top: 65, left: 160, width: 200 }}>Whiley</Text>
   </View>
 );
 
@@ -54,13 +55,19 @@ export const Externals = () => (
         <Text style={{ fontFamily: "OpenSans", fontSize: 12 }}>JWhiley</Text>
       </Link>
     </View>
-    <View style={{ display: "flex", flexDirection: "row", opacity: 0.5, marginTop: 8 }}>
+    <View style={{ display: "flex", flexDirection: "row", opacity: 0.5, marginTop: 2 }}>
+      <Image style={{ width: 20, height: 20, marginRight: 5 }} src={HyperLinkIcon}></Image>
+      <Link src="https://jwhiley.com">
+        <Text style={{ fontFamily: "OpenSans", fontSize: 12 }}>JWhiley.com</Text>
+      </Link>
+    </View>
+    <View style={{ display: "flex", flexDirection: "row", opacity: 0.5, marginTop: 2 }}>
       <Image style={{ width: 20, height: 20, marginRight: 5 }} src={GitHubLogo}></Image>
       <Link src="https://github.com/jaydenwhiley">
         <Text style={{ fontFamily: "OpenSans", fontSize: 12 }}>JaydenWhiley</Text>
       </Link>
     </View>
-    <View style={{ display: "flex", flexDirection: "row", opacity: 0.5, marginTop: 8 }}>
+    <View style={{ display: "flex", flexDirection: "row", opacity: 0.5, marginTop: 2 }}>
       <Image style={{ width: 20, height: 20, marginRight: 5 }} src={GmailLogo}></Image>
       <Link src="mailto:jaydenwhiley@gmail.com">
         <Text style={{ fontFamily: "OpenSans", fontSize: 12 }}>JaydenWhiley@gmail.com</Text>
@@ -190,7 +197,7 @@ const styles = StyleSheet.create({
     position: "relative",
     fontFamily: "NeoTech",
     fontWeight: "bold",
-    fontSize: "40pt",
+    fontSize: "45pt",
     color: "#2b80d8",
   },
   page: {
